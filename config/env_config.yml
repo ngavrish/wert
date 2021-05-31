@@ -1,0 +1,6 @@
+host:
+  url: https://api.nasa.gov/planetary/earth/imagery
+  api_key: Uom28hlMrNp6p2nbyqDQTNJU5c1gd9DTOLcoMUke
+test_data_path: testdata/nasa_imagery
+testrun_images_path: testdata/nasa_imagery/testrun_images
+validation_images_path: testdata/nasa_imagery/validation_images
