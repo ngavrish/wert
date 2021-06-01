@@ -32,7 +32,7 @@ def test_get_image_by_coordinates_and_date(longitude,latitude,date,positive,erro
     logger.info(f"Resp status code = {response.status_code}")
     logger.info(f"Resp url = {response.url}")
 
-    if positive:
+    if positive=="true":
         if 'image' not in response.headers.get('content-type').lower():
             # in this example we will not get many images, not in normal environment this would be legit assert
             # assert False, "Non-image content is returned. Expected image content-type"
@@ -53,7 +53,7 @@ def test_get_image_by_coordinates_and_date(longitude,latitude,date,positive,erro
     # In scope of this task I am not going to make research on which dates images are available and on which they are not
 
     # assert response.status_code == http.HTTPStatus.OK
-    if not positive:
+    elif positive=="false":
         resp_json = response.json()
         print(resp_json.get('msg', ' message'))
         # Normally we would validate specific messages here, but the only message we'll get is - no image in specified date,
